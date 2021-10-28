@@ -18,8 +18,6 @@ namespace PatientFind
             //PatientList.Add(p3);
             //PatientList.Add(p4);
             //PatientList.Add(p5);
-            Console.WriteLine("Enter criteria of finding");
-            string criteria = Console.ReadLine();
             Console.WriteLine("Commands for input: ");
             Console.WriteLine("To search by name: Findbyname");
             Console.WriteLine("To search by surname: Findbysurname");
@@ -27,6 +25,7 @@ namespace PatientFind
             Console.WriteLine("To search by status: Findlessthan");
             Console.WriteLine("To exit the program enter: Close program");
             Console.Write("Enter criteria of finding:");
+            string criteria = Console.ReadLine();
             criteria = criteria.ToLower();
             criteria = criteria.Trim();
             bool factor = true;
@@ -90,7 +89,7 @@ namespace PatientFind
                             if (LessThan(PatientList, age, out List<Patient> p))
                             {
                                 foreach (var a in p)
-                                    Console.WriteLine(a.Name + " " + a.SurName);
+                                Console.WriteLine(a.Name + " " + a.SurName);
                             }
                             else
                             {
